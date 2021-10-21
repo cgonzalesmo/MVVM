@@ -5,14 +5,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".view.MainActivity"
-    android:id="@+id/header">
+    tools:context=".view.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="20dp"
+        android:elevation="20dp">
+
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_baseline_supervised_user_circle_24"
+            app:tint="@color/colorWhite"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvHello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_header_hello"
+            android:textColor="@color/colorWhite"
+            android:textSize="24dp"
+            app:layout_constraintLeft_toRightOf="@id/header_image"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_header_desc"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintTop_toBottomOf="@+id/tvHello"
+            app:layout_constraintStart_toStartOf="@+id/tvHello"
+            app:flow_wrapMode="chain"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idRVPersons"
         tools:listitem="@layout/person_rv_item"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header"
         />
 
 
