@@ -16,4 +16,9 @@
     <string name="newpatient_form_masculino">Masculino</string>
     <string name="newpatient_form_femenino">Femenino</string>
     <string name="newpatient_form_direccion">Dirección</string>
+    <string name="editpatient_tv_peso">Peso:</string>
+    <string name="editpatient_tv_temp">Temperatura:</string>
+    <string name="editpatient_tv_sat">Saturación: </string>
+    <string name="editpatient_tv_pres">Presión:</string>
+    <string name="editpatient_title"><b>Editar</b> visita al paciente</string>
 </resources>

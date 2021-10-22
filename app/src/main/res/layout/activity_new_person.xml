@@ -43,6 +43,8 @@
 
 
 
+
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/np_input_nombres"
             android:layout_width="match_parent"
@@ -190,18 +192,6 @@
         android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
-
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/np_fab_cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_cancel_24"
-        app:tint="@color/colorWhite"
-        android:layout_margin="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/np_fab_save"
-        android:backgroundTint="@color/colorRed"/>
 
 
 

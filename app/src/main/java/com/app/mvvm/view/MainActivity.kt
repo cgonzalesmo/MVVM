@@ -43,9 +43,16 @@ class MainActivity : AppCompatActivity(), PersonClickInterface, PersonClickDelet
     }
 
     override fun onPersonClick(personModel: PersonModel) {
-        val intent = Intent(this@MainActivity,NewPersonActivity::class.java)
+        val intent = Intent(this@MainActivity,EditPersonActivity::class.java)
         intent.putExtra("personType","Edit")
         intent.putExtra("personName",personModel.personName)
+        intent.putExtra("personApePat",personModel.personApellidoPat)
+        intent.putExtra("personApeMat",personModel.personApellidoMat)
+        intent.putExtra("personDni",personModel.personDni)
+        intent.putExtra("personTemp",personModel.personTemp)
+        intent.putExtra("personPeso",personModel.personPeso)
+        intent.putExtra("personPres",personModel.personPres)
+        intent.putExtra("personSat",personModel.personSat)
         intent.putExtra("personID",personModel.id)
         startActivity(intent)
         this.finish()

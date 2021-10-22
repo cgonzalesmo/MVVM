@@ -13,6 +13,9 @@
             android:name=".view.NewPersonActivity"
             android:exported="true" />
         <activity
+            android:name=".view.EditPersonActivity"
+            android:exported="true" />
+        <activity
             android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>

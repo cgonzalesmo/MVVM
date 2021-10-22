@@ -21,6 +21,7 @@ class PersonRVAdapter(
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val nameTV = itemView.findViewById<TextView>(R.id.patient_name)
+        val dniTV = itemView.findViewById<TextView>(R.id.patient_desc)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -30,6 +31,7 @@ class PersonRVAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.nameTV.setText(allPersons.get(position).personName)
+        holder.dniTV.setText(allPersons.get(position).personDni)
         //Añadir los demas espacios
         holder.itemView.setOnClickListener{
             personClickInterface.onPersonClick(allPersons.get(position))

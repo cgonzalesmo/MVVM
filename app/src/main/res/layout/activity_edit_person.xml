@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor">
+
+
+    <ImageView
+        android:id="@+id/np_icon_title"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/editpatient_title"
+        android:textColor="@color/colorWhite"
+        android:textSize="24dp"
+        app:layout_constraintLeft_toRightOf="@id/np_icon_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/np_icon_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="80dp"
+        android:minHeight="620dp"
+        android:background="@drawable/np_form_background"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="50dp"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true" >
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_margin="5dp">
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backgroundColor"
+                android:gravity="center_vertical"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp">
+
+                <ImageView
+                    android:id="@+id/patient_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_person_24"
+                    app:tint="@color/secondaryColor"
+                    android:layout_marginRight="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ed_patient_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/layout_patient_noname"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/ed_patient_ape"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="@string/layout_patient_data"/>
+                    <TextView
+                        android:id="@+id/ed_patient_dni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="@string/layout_patient_data"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/editpatient_tv_peso"
+                android:textColor="@color/accentColor"
+                android:textSize="18dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ep_input_peso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:elevation="10dp"
+                android:textColorHint="@color/accentColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ep_tit_peso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWhite"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="#000000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/editpatient_tv_pres"
+                android:textColor="@color/accentColor"
+                android:textSize="18dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ep_input_pres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:elevation="10dp"
+                android:textColorHint="@color/accentColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ep_tit_pres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWhite"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/editpatient_tv_temp"
+                android:textColor="@color/accentColor"
+                android:textSize="18dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ep_input_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:elevation="10dp"
+                android:textColorHint="@color/accentColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ep_tit_temp"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWhite"
+                    android:maxLines="1"
+                    android:textColor="#000000"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/editpatient_tv_sat"
+                android:textColor="@color/accentColor"
+                android:textSize="18dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ep_input_sat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:elevation="10dp"
+                android:textColorHint="@color/accentColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ep_tit_sat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWhite"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/np_fab_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_save_24"
+        app:tint="@color/colorWhite"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
